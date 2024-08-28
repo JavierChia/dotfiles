@@ -1,0 +1,39 @@
+#!/usr/bin/env zsh
+
+SKETCHYBAR_CONFIG="$HOME/.config/sketchybar"
+
+# This is used to determine if a monitor is used
+# Since the notch is -only- on the laptop, if a monitor isn't used,
+# then that means the internal display is used ¯\_(ツ)_/¯
+MAIN_DISPLAY=$(system_profiler SPDisplaysDataType | grep -B 3 'Main Display:' | awk '/Display Type/ {print $3}')
+
+if [[ $MAIN_DISPLAY = "Built-in" ]]; then
+    source "$SKETCHYBAR_CONFIG/sketchybarrc-laptop"
+else
+    source "$SKETCHYBAR_CONFIG/sketchybarrc-desktop"
+fi
+
+# #!/usr/bin/env zsh
+
+# SKETCHYBAR_CONFIG="$HOME/.config/sketchybar"
+
+# # Get a list of all connected displays and their details
+# DISPLAYS=$(system_profiler SPDisplaysDataType | grep -A 10 "Displays:")
+# echo "[test1] displays: $DISPLAYS"
+# # Iterate through each connected display
+# echo "$DISPLAYS" | while read -r DISPLAY_LINE; do
+#     # Print the current line being processed
+#     echo "[test2] Processing: $DISPLAY_LINE"
+#     echo "[test3]: [[ $DISPLAY_LINE == *"Resolution: 3024 x 1964 Retina"* ]]"
+
+#     # Check if the display resolution is for the built-in display
+#     if [[ $DISPLAY_LINE == *"Resolution: 3024 x 1964 Retina"* ]]; then
+#         # Apply the configuration for the built-in (laptop) display
+#         echo "[test4] Applying laptop config..."
+#         source "$SKETCHYBAR_CONFIG/sketchybarrc-laptop"
+#     elif [[ $DISPLAY_LINE == *"Resolution: 1920 x 1080 (1080p FHD - Full High Definition)"* ]]; then
+#         # Apply the configuration for external displays (desktop mode)
+#         echo "[test5] Applying desktop config..."
+#         source "$SKETCHYBAR_CONFIG/sketchybarrc-desktop"
+#     fi
+# done

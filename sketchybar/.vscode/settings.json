@@ -1,0 +1,43 @@
+{
+  "workbench.colorCustomizations": {
+    "terminal.background": "#00000000"
+  },
+
+  "terminal.integrated.fontFamily": "MesloLGS NF",
+  "vscode_custom_css.imports": [
+    "file:///Users/javier/.vscode/extensions/brandonkirbyson.vscode-animations-2.0.3/dist/updateHandler.js",
+    "file:///Users/javier/custom-vscode.css"
+    // "file:///Users/javier/custom-vscode-script.js"
+  ],
+  "editor.minimap.enabled": false,
+  "breadcrumbs.enabled": false,
+  "editor.stickyScroll.enabled": false,
+  "editor.renderWhitespace": "none",
+  "editor.renderControlCharacters": false,
+  "workbench.statusBar.visible": false,
+  "editor.fontFamily": "Fira Code",
+  "editor.fontLigatures": true,
+  "editor.formatOnSave": true,
+  "[jsonc]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "files.autoSave": "afterDelay",
+  "editor.accessibilitySupport": "off",
+  "terminal.integrated.env.osx": {
+    "Q_NEW_SESSION": "1"
+  },
+  "workbench.iconTheme": "material-icon-theme",
+  "explorer.confirmDelete": false,
+  "workbench.colorTheme": "Wal",
+  "[typescript]": {
+    "editor.defaultFormatter": "vscode.typescript-language-features"
+  },
+  "editor.defaultFormatter": "dbaeumer.vscode-eslint",
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[typescriptreact]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "animations.Enabled": true
+}
